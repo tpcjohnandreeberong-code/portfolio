@@ -1,0 +1,201 @@
+
+/* Basic */
+body {
+    background: url("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWJ2Y3dua2c3bHprMG1sM3FoZjlxZm85ZnltdzNha3ExczgwODJzeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8PEbUBEwxktyNeqVZ4/giphy.gif") no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+/* Neon Text */
+.neon-text { color: #bd4bff; text-shadow: 0 0 10px #c74bff, 0 0 20px #c74bff; }
+
+/* Navbar */
+.navbar { background: rgba(0,0,0,0.6); backdrop-filter: blur(10px); }
+.nav-link.active-link { color: #bd4bff !important; }
+
+p {
+    color: white;
+}
+
+.typing {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+/* Hero */
+
+.hero { padding-top: 120px; }
+.glow-border { padding: 20px; border-radius: 20px; background: linear-gradient(135deg,#ff00cc,#3300ff); animation: glow 3s infinite alternate; }
+@keyframes glow { from { box-shadow:0 0 10px #ff00cc; } to { box-shadow:0 0 30px #3300ff; } }
+
+/* Buttons */
+.neon-btn { background: linear-gradient(90deg,#ff00cc,#3333ff); color:white; padding:10px 25px; border-radius:50px; border:none; transition:0.3s; }
+.neon-btn:hover { transform: scale(1.1); box-shadow:0 0 25px #ff00cc; }
+
+/* 🔥 Animated Neon Gradient Border */
+.project-card {
+    position: relative;
+    padding: 30px;
+    border-radius: 22px;
+    background: #0d0d14;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+/* Animated border layer */
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 22px;
+    background: linear-gradient(120deg, #ff00cc, #bd4bff, #3300ff, #ff00cc);
+    background-size: 300%;
+    z-index: -1;
+    animation: neonMove 6s linear infinite;
+    filter: blur(8px);
+}
+
+/* Actual card (para hindi matabunan ng glow) */
+.project-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #0d0d14;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+/* Neon Title */
+.project-card h3 {
+    color: #bd4bff;
+    font-weight: 700;
+    text-shadow:
+        0 0 10px #bd4bff,
+        0 0 20px #bd4bff,
+        0 0 35px #bd4bff;
+    transition: 0.3s;
+}
+
+/* Description Text */
+.project-card p {
+    color: #e0d7ff;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+/* Hover Glow Boost */
+.project-card:hover {
+    transform: translateY(-12px) scale(1.04);
+    box-shadow: 
+        0 0 20px #bd4bff,
+        0 0 40px #bd4bff,
+        0 0 60px #bd4bff;
+}
+
+/* Glow Pulse Effect on Hover */
+.project-card:hover h3 {
+    text-shadow:
+        0 0 15px #ff00e1,
+        0 0 30px #bd4bff,
+        0 0 45px #7f00ff;
+}
+
+/* Gradient Animation */
+@keyframes neonMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Tilt */
+.tilt:hover { transform: perspective(800px) rotateY(10deg); }
+
+/* Reveal */
+.reveal { opacity:0; transform: translateY(40px); transition:0.8s ease; }
+.reveal.active { opacity:1; transform: translateY(0); }
+
+
+/* Back to Top */
+.back-to-top { position:fixed; right:20px; bottom:20px; background:#bd4bff; padding:10px 15px; border-radius:50%; display:none; cursor:pointer; }
+.back-to-top i { color:white; }
+
+/* Social Sidebar */
+.social-sidebar { position:fixed; left:20px; top:50%; transform:translateY(-50%); display:flex; flex-direction:column; gap:15px; }
+.social-sidebar a { background:#bd4bff; padding:10px; border-radius:50%; color:white; text-align:center; transition:0.3s; }
+.social-sidebar a:hover { transform:scale(1.1); box-shadow:0 0 10px #bd4bff; }
+
+/* Center hero text content */
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical center */
+    align-items: center;     /* horizontal center */
+    text-align: center;      /* center text inside */
+}
+
+/* Optional: adjust font size for name */
+.hero-text .neon-text {
+    font-size: 3rem;
+}
+body.dark-mode p {
+    color: #000 !important; /* put any color you want for light mode */
+}
+
+body:not(.dark-mode) p {
+    color: #ffffff !important; /* pure white for dark mode */
+}
+/* Section Titles Neon Color */
+.section-title {
+    color: #bd4bff; /* parehong kulay ng MyPortfolio sa navbar */
+    text-shadow: 0 0 10px #c74bff, 0 0 20px #c74bff;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.popup-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #13131a;
+    padding: 25px;
+    border-radius: 15px;
+    width: 320px;
+    box-shadow: 0 0 20px #bd4bff;
+    display: none;
+    z-index: 9999;
+}
+.about-text {
+    color: #ffffff !important;
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+/* Photo Cards */
+.photo-card {
+    overflow: hidden;
+    border-radius: 20px;
+    background: #0d0d14;
+    padding: 8px;
+    transition: 0.3s;
+}
+
+.glow-photo {
+    border: 2px solid #bd4bff;
+    box-shadow: 0 0 15px #bd4bff;
+}
+
+.photo-card img {
+    width: 100%;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+/* Hover zoom */
+.photo-card:hover img {
+    transform: scale(1.1);
+}
+

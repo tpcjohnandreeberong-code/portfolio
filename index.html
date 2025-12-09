@@ -1,1 +1,160 @@
-<P>hello</P>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Neon Portfolio</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="subscribeBox" class="popup-box">
+    <h3 class="neon-text">Subscribe</h3>
+    <input type="email" id="subEmail" class="form-control mb-3" placeholder="Enter your email">
+    <button class="btn neon-btn w-100" onclick="sendSubscribe()">Submit</button>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+  <div class="container">
+    <a class="navbar-brand neon-text fw-bold" href="#">MyPortfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto gap-4">
+        <li class="nav-item"><a class="nav-link active-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#photos">Photos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> 
+      </ul>
+      <button class="btn neon-btn ms-3">Subscribe</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero container py-5 d-flex align-items-center">
+  <div class="row w-100">
+    <div class="col-lg-6 hero-text">
+      <h1 class="fw-bold text-white">Hi, I'm <span class="neon-text">John Andree Berong</span></h1>
+      <h2 class="fw-bold typing"></h2>
+      <p class="text-muted mt-3">I build websites that are interactive, and visually stunning. I focus on creating seamless user experiences that keep visitors engaged. My designs combine performance with eye-catching visuals for maximum impact.</p>
+      
+    </div>
+    <div class="col-lg-6 text-center hero-img">
+      <div class="image-box glow-border">
+        <img src="assets/img/japapi.jpg" class="img-fluid neon-image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="container py-5 reveal">
+  <h1 class="section-title">About Me</h1>
+  <p class="about-text">
+    I’m a frontend developer with a passion for creating animated websites.
+    I specialize in designing modern and engaging UI/UX experiences.
+    My goal is to build interfaces that are both visually appealing and user-friendly.
+    I enjoy bringing creative ideas to life through smooth animations and interactive elements.
+    Each project I work on is an opportunity to merge functionality with aesthetic design.
+</p>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="container py-5 reveal">
+  <h1 class="section-title">Projects</h1>
+  <div class="row mt-4">
+    <div class="col-lg-4">
+      <div class="project-card tilt">
+        <h3>Portfolio Website</h3>
+        <p>Animated neon-themed portfolio.</p>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="project-card tilt">
+        <h3>UI Dashboard</h3>
+        <p>Responsive modern dashboard with glassmorphism.</p>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="project-card tilt">
+        <h3>Mobile App UI</h3>
+        <p>Clean minimal mobile interface.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Photos Section -->
+<section id="photos" class="container py-5 reveal">
+  <h1 class="section-title">Photos</h1>
+
+  <div class="row g-4 mt-3">
+
+    <!-- Photo 1 -->
+    <div class="col-md-4">
+      <div class="photo-card glow-photo">
+        <img src="assets/img/berong.jpg" class="img-fluid rounded-4">
+      </div>
+    </div>
+
+    <!-- Photo 2 -->
+    <div class="col-md-4">
+      <div class="photo-card glow-photo">
+        <img src="assets/img/andree.jpg" class="img-fluid rounded-4">
+      </div>
+    </div>
+
+    <!-- Photo 3 -->
+    <div class="col-md-4">
+      <div class="photo-card glow-photo">
+        <img src="assets/img/bwrong.jpg" class="img-fluid rounded-4">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container py-5 reveal">
+  <h1 class="section-title">Contact Me</h1>
+  <form id="contactForm" class="mt-4">
+    <input type="text" id="name" class="form-control mb-3" placeholder="Your Name">
+    <input type="email" id="email" class="form-control mb-3" placeholder="Email">
+    <textarea id="message" class="form-control mb-3" rows="4" placeholder="Message"></textarea>
+    <button type="submit" class="btn neon-btn w-100">Send Message</button>
+    <p id="formMsg" class="mt-2"></p>
+  </form>
+</section>
+
+
+<!-- Social Sidebar -->
+<div class="social-sidebar">
+  <a href="https://www.facebook.com/BerongJ.A.12"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://x.com/AndreeJohn22121?s=09"><i class="fab fa-twitter"></i></a>
+  <a href="https://www.instagram.com/ja.bwrongzkie?igsh=MXRraDZkd2l0c2Frcw=="><i class="fab fa-instagram"></i></a>
+
+</div>
+
+<!-- Back to Top -->
+<div class="back-to-top"><i class="fa-solid fa-arrow-up"></i></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
